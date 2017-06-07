@@ -1,0 +1,9 @@
+[template]
+src = "myconfig.conf.tmpl"
+dest = "/tmp/myconfig.conf"
+keys = [
+#    "/database/url",
+#    "/database/user",
+#    "/other/name",
+     "/DEFAULT/admin_token",
+]

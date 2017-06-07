@@ -1,0 +1,9 @@
+# {{datetime}}
+{{range $index, $section := lsdir "/"}}
+[{{base $section}}]
+{{$kv_path := printf "/%s/*" $section}}
+# kv_path: {{$kv_path}}
+{{range gets $kv_path}}{{base $section}}_{{base .Key}} = {{.Value}}
+{{end}}
+{{end}}
+
